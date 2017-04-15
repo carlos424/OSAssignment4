@@ -2,37 +2,43 @@
 /* required for rand() */ 
 #include <pthread.h>
 #include "buffer.h" 
+#include <iostream>
+#include <unistd.h>
+
+using namespace std;
+
 void *producer(void *param) 
 { 
-	buffer item item; 
+	buffer_item item; 
 	while (true) 
 	{ 
 		/* sleep for a random period of time */ 
-		sleep(...); /* generate a random number */ 
+		sleep(rand()); 
+		/* generate a random number */ 
 		
 		item = rand(); 
-		if (insert item(item)) 
+		if (insert_item(item))
 		{
-			fprintf("Report error condition");
+			cout << "Report error condition" << endl;
 		}	
 		
-		else printf("Producer produced %d\n",item); 
+		else cout << "Producer produced %d\n " << item << endl; 
 	} 
 }
 void *consumer(void *param) 
 { 
-	buffer item item; 
+	buffer_item item; 
 	while (true) 
 	{ 
 		/* sleep for a random period of time */ 
-		sleep(...); 
+		sleep(rand()); 
 		
-		if (remove item(&item)) 
+		if (remove_item(&item)) 
 		{
-			fprintf("Report error condition"); 
+			cout << "Report error condition" << endl; 
 		}
 		
-		else printf("Consumer consumed %d\n",item);
+		else cout << "Consumer consumed %d\n " << item << endl;
 	}
 
 }
