@@ -10,8 +10,9 @@
 
 using namespace std;
 
-void *producer0(void *param) ;
+void *producer(void *param);
 
-void *consumer0(void *param) ;
+void *consumer(void *param);
+
 #endif
 
