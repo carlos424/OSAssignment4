@@ -1,13 +1,9 @@
-#include <stdlib.h> 
-/* required for rand() */ 
-#include <pthread.h>
-#include "buffer.h" 
-#include <iostream>
-#include <unistd.h>
+
+#include "sync.h"
 
 using namespace std;
 
-void *producer(void *param) 
+void *producer0(void *param) 
 { 
 	buffer_item item; 
 	while (true) 
@@ -25,7 +21,7 @@ void *producer(void *param)
 		else cout << "Producer produced %d\n " << item << endl; 
 	} 
 }
-void *consumer(void *param) 
+void *consumer0(void *param) 
 { 
 	buffer_item item; 
 	while (true) 

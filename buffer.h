@@ -1,3 +1,6 @@
+#ifndef BUFFER_H
+#define BUFFER_H
+
 /* buffer.h */ 
 #include <pthread.h>
 typedef int buffer_item; 
@@ -5,3 +8,5 @@ typedef int buffer_item;
 
 int insert_item(buffer_item item);
 int remove_item(buffer_item *item);
+
+#endif

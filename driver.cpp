@@ -1,5 +1,7 @@
 #include "buffer.h" 
 #include <pthread.h>
+#include "sync.h"
+
 int main(int argc, char *argv[]) 
 { 
 /* 1. Get command line arguments argv[1],argv[2],argv[3] */ 
@@ -15,3 +17,4 @@ int main(int argc, char *argv[])
 /* 6. Exit */ 
  
 }
+
